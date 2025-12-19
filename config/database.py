@@ -1,5 +1,5 @@
 import mysql.connector
-import os
+import streamlit as st
 
 def get_connection():
     return mysql.connector.connect(
@@ -9,4 +9,5 @@ def get_connection():
         database=st.secrets["database"],
         port=int(st.secrets["port"])
     )
+
 
