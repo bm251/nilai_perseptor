@@ -3,9 +3,10 @@ import os
 
 def get_connection():
     return mysql.connector.connect(
-        host=os.environ["MYSQLHOST"],
-        user=os.environ["MYSQLUSER"],
-        password=os.environ["MYSQLPASSWORD"],
-        database=os.environ["MYSQLDATABASE"],
-        port=int(os.environ["MYSQLPORT"])
+        host=st.secrets["host"],
+        user=st.secrets["user"],
+        password=st.secrets["password"],
+        database=st.secrets["database"],
+        port=int(st.secrets["port"])
     )
+
